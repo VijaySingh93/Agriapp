@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block metadata %}{% endblock %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" />
+    <title>Document</title>
+</head>
+<body style="font-family: 'Raleway', sans-serif;">
+    <div>
+        <nav class="top-nav m-b-3 p-t-1 animated fadeInDown clearfix">
+            <div class="container">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item"><a href="{{url_for('home')}}">Home</a></li>
+                    <li class="list-inline-item"><a href="{{url_for('search_page')}}">Search Answers</a></li>
+                </ul>
+            </div>
+        </nav>
+        {% block content %}
+        {% endblock %}
+        <footer class="p-y-2">
+            <blockquote class="quote-card">
+                <p>
+                    “Torture the data, and it will confess to anything.”
+                </p>
+
+                <cite>
+                    – Ronald Coase
+                </cite>
+            </blockquote>
+        </footer>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>

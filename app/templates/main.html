@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% block content %}
+<!-- jumbotron -->
+<header id="home" class="top-hero jumbotron-fluid p-b-3 bg-faded">
+        <div class="container animated fadeInUp">
+            <h1 class="display-3">Agriculture App</h1>
+            <p class="lead m-t-1 m-b-2">Engine to answer agricultural queries</p>
+            <a href="{{url_for('search_page')}}"><button type="button" class="btn btn-danger m-t-1">Query Search</button></a>
+        </div>
+    </header>
+
+    <section id="speakers" class="banner speakers p-y-3">
+        <div class="wrapper">
+            <h2 class="m-b-2 display-5">Uses cognitive approach which an experienced professional applies based on the previous "knowledge" of answers.</h2>
+        </div>
+    </section>
+    <section id="topics" class="banner learn p-y-3">
+        <div class="wrapper">
+            <h2 class="m-b-2 display-5">Uses Elasticsearch which provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents</h2>
+        </div>
+    </section>
+    <div id="locations" class="banner signup p-y-3">
+        <div class="wrapper">
+            <h2 class="m-b-2 display-5">Built on Flask which is a “microframework” for Python, and is an excellent choice for building smaller applications, APIs, and web services.</h2>
+        </div>
+    </div>
+{% endblock %}

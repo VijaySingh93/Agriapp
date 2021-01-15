@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="jumbotron all">
+  </div>
+<br>
+<hr>
+<br>
+<div class="panel panel-default" style="text-align: center">
+   <div class="panel-body"><h4><b>Result for : {{input}}</b></h4></div>
+</div>
+<br><br>
+<div class="container">
+            <div class="table-responsive">
+               <table class="table table-hover">
+                  <thead>
+                     <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {% for doc in results['hits']['hits'] %}
+                     <tr>
+                     <tr>
+                        <td>
+                           <p>{{doc['_source']['query_text']}}</p>
+                        </td>
+                        <td>
+                           <p>{{doc['_source']['kcc_answer']}}</p>
+                        </td>
+                     </tr>
+                     </tr>
+                     {% endfor %}
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         {% endblock %}

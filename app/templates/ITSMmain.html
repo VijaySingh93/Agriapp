@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="jumbotron all">
+</div>
+
+<br>
+<hr>
+<br>
+<form method = "POST" action = "" style="height: 100vh;">
+   {{ form.hidden_tag()}}
+   <fieldset class="form-group">
+      <legend class="border-bottom" mb-4> </legend>
+      <div class="form-group">
+          <center>
+         {{form.searchtext(class="container form-control", placeholder="Enter Question Here..")}}</center>
+      </div>
+   </fieldset>
+   <div class="form-group"> 
+         <center>{{form.submit(class="btn btn-outline-info btn-sm")}}</center>
+   </div>
+</form>
+{% endblock %}
+
